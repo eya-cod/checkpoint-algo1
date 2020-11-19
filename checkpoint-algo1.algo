@@ -1,0 +1,47 @@
+// sentence lenght
+
+ALGORITHM SentenceLength
+VAR
+    phrase:STRING:="my first checkpoint algo";
+    nb:INTEGER:=0;
+BEGIN
+    Read (phrase);
+    nb:=Len(phrase)
+    Write "this string has",nb,"characters"
+END
+
+//nember of worlds
+
+ALGORITHM number of words 
+VAR
+    phrase:STRING:="my first checkpoint algo"
+    nb,i:INTEGER;
+BEGIN
+    Read(phrase)
+    nb:=0
+    FOR i FROM 1 TO Len(phrase) STEP step  DO 
+    IF (Mid(phrase,i,1)=" ") THEN
+        nb:=nb+1
+    ELSE i 
+    END_IF
+    END_FOR
+    Write "this string has",nb+1,"words"
+END
+
+//number of vowels
+
+ALGORITHM number of vowels
+VAR
+    phrase:STRING:="my first checkpoint algo"
+    nb,i,j:INTEGER;
+BEGIN
+    Read(phrase)
+    nb:=0
+    FOR i FROM 1 TO Len(phrase) STEP step  DO 
+    IF (Mid(phrase, i, 1) = "a" OR Mid(phrase, i, 1) = "e" OR Mid(phrase, i, 1) = "i" OR Mid(phrase, i, 1) = "o" OR Mid(phrase, i, 1) = "u" OR Mid(phrase, i, 1) = "y") THEN
+    nb=nb+1
+    ELSE i 
+    END_IF 
+    END_FOR
+    Write "this string has",nb,"vowels"
+END
